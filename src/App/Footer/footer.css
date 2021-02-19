@@ -1,0 +1,132 @@
+.footer {
+  background-color: #ebebeb;
+}
+.footer-row {
+  position: relative;
+}
+.footer-img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 10;
+}
+.footer-img-person {
+  height: 100%;
+  width: 100%;
+}
+.footer-decor {
+  position: absolute;
+  z-index: 20;
+}
+.footer-img-decor {
+  height: 100%;
+  width: 100%;
+}
+.footer-form {
+  height: 270px;
+  background-color: #33282c;
+  border-top: 10px solid #f7d54a;
+  position: relative;
+  margin-left: 20px;
+  z-index: 1;
+}
+.footer-bg-img {
+  background-image: url("../img/footer-bg-img.png");
+  background-position-y: 80px;
+  background-repeat: no-repeat;
+}
+.wrap-form-ico {
+  width: 60px;
+  height: 60px;
+  background-color: #f7d54a;
+  text-align: center;
+  line-height: 80px;
+  position: absolute;
+  top: -10px;
+  left: -20px;
+}
+.ftr-box-ico {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 245px;
+  position: absolute;
+  top: 0px;
+  left: 40px;
+}
+.ftr-ico {
+  width: 42px;
+  height: 38px;
+  border-radius: 2px;
+  text-align: center;
+  line-height: 42px;
+  background-color: #00acee;
+}
+.ftr-ico1 {
+  background-color: #3b5997;
+  line-height: 51px;
+}
+.ftr-ico2 {
+  background-color: #e94b89;
+}
+.ftr-ico3 {
+  background-color: #db4939;
+}
+.ftr-ico4 {
+  background-color: #598727;
+}
+.ftr-form-cont {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+.form-name {
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.form-text {
+  max-width: 480px;
+  color: #ffffff;
+  font-weight: 300;
+}
+.frm-btn {
+  background-color: #48a4be;
+  position: absolute;
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+}
+.frm-btn:hover {
+  background-color: #214b57;
+}
+.ftr-limitation {
+  background-color: rgba(167, 62, 92, 0);
+  border: 5px solid #d4d4d4;
+  color: #000000;
+  font-weight: 300;
+  text-align: center;
+}
+.ftr-inf-name {
+  color: #000000;
+  font-weight: 600;
+}
+.ftr-inf-text {
+  color: #000000;
+  font-weight: 300;
+  margin-top: 3%;
+}
+.footer-inf-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.footer-stick {
+  margin-left: 40%;
+  margin-top: 6%;
+}
+.main-sort {
+  display: flex;
+  flex-direction: row;
+}

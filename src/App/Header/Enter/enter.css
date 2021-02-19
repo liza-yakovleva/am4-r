@@ -1,0 +1,24 @@
+.enter {
+  background-color: white;
+  height: 40px;
+  text-transform: uppercase;
+  border: none;
+ color: #000000;
+font-size: 18px;
+letter-spacing: 0.54px;
+}
+.reg {
+  height: 40px;
+  background-color: white;
+    text-transform: uppercase;
+  border: none;
+ color: #000000;
+font-size: 18px;
+font-weight: 400;
+letter-spacing: 0.9px;
+}
+.enter:hover,
+.reg:hover {
+  color: #32272b;
+background-color: #30b5d8;
+}
