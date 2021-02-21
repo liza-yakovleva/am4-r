@@ -1,7 +1,13 @@
 import React from "react"
-import "./article.css"
+import { Link } from "react-router-dom"
+
 import '../../common/style/base.css'
-import '../../common/style/media.css'
+import './media.css'
+import "./article.css"
+import  i709 from './img/709.png'
+import beetly from './img/beetly.png'
+// import  beetly from './img/beetly.png'
+
 const Article =()=> {
     return (
 <main className="main">
@@ -40,30 +46,27 @@ const Article =()=> {
       <div className="col-md-7 col-xs-7 main-choice-cont">
         <div className="main-dots pagination dots-pagin">
           <ul>
-            <a href="#">
+            <Link to="/">
               <li></li>
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="/">
               <li></li>
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="/">
               <li></li>
-            </a>
-            <a className="is-active" href="#">
+            </Link>
+            <Link className="is-active" to="/">
               <li></li>
-            </a>
-            <a href="#">
+            </Link>
+            <Link to="/">
               <li></li>
-            </a>
+            </Link>
           </ul>
         </div>
         <div className="pagination slide-arrow">
           <ul>
-            <a className="is-active" href="#">
-              <li>
-                <</li> </a> <a href="#">
-              <li>></li>
-            </a>
+            <Link className="is-active" to="/"><li> prev </li> </Link>
+          <Link to="/"><li>next</li> </Link>
           </ul>
         </div>
       </div>
@@ -71,8 +74,8 @@ const Article =()=> {
 <div className="row game-cards-row">
   
      <div className="game-cards">
-<!-- --------1------------ -->
-          <a href="../new-pages/new-pages2.html" className="card">
+
+          <div className="card">
          <div className="article-img-name">
            <div className="article-img-name__img">
              <div className="article-img-name__img-date color-1">
@@ -80,7 +83,7 @@ const Article =()=> {
                <span className="date-month">март</span>
              </div>
              <div className="article-img-name__img-image">
-               <img src="img/709.png" alt="img"/>
+               <img src={i709} alt="img"/>
             </div>
            </div>
            <div className="article-img-name__state">
@@ -98,9 +101,9 @@ const Article =()=> {
 <p className="norm">К 2015 году накопилось некое количество проблем в играх, о которых стоит поговорить. Интересен тот факт,
   что про эти проблемы знает практически каждый, но при этом никто ничего не делает...</p>
            </div>
-          </a>
-<!-- --------2------------ -->
-  <a href="../new-pages/new-pages.html" className="card">
+          </div>
+
+  <div className="card">
     <div className="article-img-name">
       <div className="article-img-name__img">
         <div className="article-img-name__img-date color-2">
@@ -108,7 +111,7 @@ const Article =()=> {
           <span className="date-month">март</span>
         </div>
         <div className="article-img-name__img-image">
-          <img src="img/beetly.png" alt="img"/>
+          <img src={beetly} alt="img"/>
         </div>
       </div>
       <div className="article-img-name__state">
@@ -126,10 +129,10 @@ const Article =()=> {
       <p className="italic"> Если подумать, то по-настоящему отвратительных игр существует не так уж и много.</p>
       <p className="norm">Но Raven’s Cry принадлежит к числу исключений. В ней нет практически ничего, чем разработчики могли бы гордиться.</p>
     </div>
-    </a>
-    <!-- --------3------------ -->
+    </div>
+    
    
- <a href="../new-pages/new-pages2.html" className="card">
+ <div className="card">
   <div className="article-img-name">
     <div className="article-img-name__img">
       <div className="article-img-name__img-date color-3">
@@ -137,7 +140,7 @@ const Article =()=> {
         <span className="date-month">июнь</span>
       </div>
       <div className="article-img-name__img-image">
-        <img src="img/709.png" alt="img"/>
+        <img src={beetly} alt="img"/>
       </div>
     </div>
     <div className="article-img-name__state">
@@ -156,9 +159,9 @@ const Article =()=> {
     <p className="norm">
       Взамен студия дала своим почитателям полный доступ к игре с самого раннего этапа и возможность непосредственно влиять на ход разработки.</p>
   </div>
- </a>
-<!-- --------4------------ -->
- <a href="../new-pages/new-pages.html" className="card">
+ </div>
+
+ <div className="card">
   <div className="article-img-name">
     <div className="article-img-name__img">
       <div className="article-img-name__img-date color-4">
@@ -166,7 +169,7 @@ const Article =()=> {
         <span className="date-month">март</span>
       </div>
       <div className="article-img-name__img-image">
-        <img src="img/709.png" alt="img"/>
+        <img src={beetly} alt="img"/>
       </div>
     </div>
     <div className="article-img-name__state">
@@ -184,9 +187,9 @@ const Article =()=> {
     <p className="italic">В некоторых моментах Total War: Attila далеко ушла от своей предшественницы, Rome 2.</p>
     <p className="norm">Эта игра ни в коем случае не дополнение, как может сперва показаться, а самостоятельный проект, действие которого разворачивается в совершенно другой эпохе.</p>
   </div>
- </a>
-<!-- --------5------------ -->
- <a href="../new-pages/new-pages2.html" className="card">
+ </div>
+
+ <div className="card">
   <div className="article-img-name">
     <div className="article-img-name__img">
       <div className="article-img-name__img-date color-5">
@@ -194,7 +197,7 @@ const Article =()=> {
         <span className="date-month">июль</span>
       </div>
       <div className="article-img-name__img-image">
-        <img src="img/709.png" alt="img"/>
+        <img src={beetly} alt="img"/>
       </div>
     </div>
     <div className="article-img-name__state">
@@ -213,9 +216,9 @@ const Article =()=> {
     <p className="norm">Если вы знакомы с предыдущими частями Cities, то вам наверняка известно, что основную работу по развитию игры
       проделывает сообщество... внося/....необходимые изменения и расширяя существующий функционал.</p>
   </div>
-  </a>
-<!-- --------6------------ -->
- <a href="../new-pages/new-pages.html" className="card">
+  </div>
+
+ <div className="card">
   <div className="article-img-name">
     <div className="article-img-name__img">
       <div className="article-img-name__img-date color-6">
@@ -223,7 +226,7 @@ const Article =()=> {
         <span className="date-month">августа</span>
       </div>
       <div className="article-img-name__img-image">
-        <img src="img/709.png" alt="img"/>
+        <img src={beetly} alt="img"/>
       </div>
     </div>
     <div className="article-img-name__state">
@@ -245,8 +248,8 @@ const Article =()=> {
       что
       про эти проблемы знает практически каждый, но при этом никто ничего не делает...</p>
   </div>
-</a>
-<!-- -------------- -->
+</div>
+
              </div>
        
   </div>

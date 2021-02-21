@@ -97,7 +97,7 @@
   display: grid;
   grid-template: 1fr/ 1fr 1fr;
 }
-.card {
+.card-trailer {
   display: flex;
   flex-direction: row;
   background-color: rgb(255, 255, 255);

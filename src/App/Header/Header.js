@@ -6,10 +6,11 @@ import Enter from './Enter/Enter';
 import Bur from './Bur-menu/Bur-menu';
 import '../../common/style/media.css'
 import '../../common/style/base.css'
-
 import './header.css'
 import './Menu/menu.css'
 import './Search/search.css'
+import { Route } from "react-router-dom"
+
 const Header = () => {
   return (
    
@@ -18,18 +19,20 @@ const Header = () => {
     <div className="container">
       <div className="header-menu">
         <div className="logo-menu-search">
-          <div className="logo"><Logo/></div>
-
-          <div className="bur-menu"><Bur/></div>
+            <div className="logo"><Route path="/"  component={Logo} /></div>
+            
+            
+            
+          <div className="bur-menu"><Route path="/" component={Bur} /></div>
           <ul className="menu">
-             <Menu/>
+             <Route path="/" component={Menu} />
           </ul>
           <div className="wrapper-search">
-            <Search/>
+            <Route path="/" component={Search} />
             </div>
             </div>
         <div className="wrapper-btn">
-          <Enter/>
+         <Route path="/" component={Enter} />
         </div>
       
     </div>

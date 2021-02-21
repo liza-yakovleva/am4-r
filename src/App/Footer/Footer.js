@@ -36,17 +36,17 @@ const Footer = () => {
                 <div className="footer-bg-img"></div>
                 <div className="wrap-form-ico">
                   <img src={footer_form_ico} alt="no-image"/>
-                </div>
+               
                 <div className="ftr-box-ico">
                   <div className="ftr-ico">
                     <img src={twitter} alt="no-image"/>
                   </div>
-                </div>
+                
                 <div className="ftr-ico ftr-ico1">
                   <img src={facebook} alt="no-image"/>
                 </div>
                 <div className="ftr-ico ftr-ico2">
-                  <img src={facebook} alt="no-image"/>
+                 
                   <img src={ico1} alt="no-image"/>
                 </div>
                 <div className="ftr-ico ftr-ico3">
@@ -54,21 +54,25 @@ const Footer = () => {
                 </div>
                 <div className="ftr-ico ftr-ico4">
                   <img src={ico2} alt="no-image"/>
-                </div>
-              </div>
+                  </div>
+                  </div>
+                   </div>
+              
               <div className="ftr-form-cont">
                 <div className="form-name">Немного о нашем сайте</div>
                 <div className="form-text">
                   AM4 — это большая коллекция игровой информации, помогающей
                   геймерам со всего мира быть в курсе последних новостей игровой
                   индустрии. Дальше не знаю, что писать... В общем, надеюсь
-                  макет вам понравится.{" "}
+                  макет вам понравится.
                 </div>
-              </div>
+                </div>
+                </div>
             </div>
-          </div>
           <button className="frm-btn">Написать нам</button>
-        </div>
+          </div>
+         
+       
         <div className="col-md-3 col-xs-3 footer-inf-wrap">
           <div className="ftr-limitation">+18</div>
           <div className="ftr-information">
@@ -81,7 +85,8 @@ const Footer = () => {
           <div className="footer-stick">
             <img src={footer_stick} alt="stick"/>
           </div>
-        </div>
+          </div>
+           </div>
       </div>
     </footer>
   );

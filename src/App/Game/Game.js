@@ -1,36 +1,34 @@
 
 import React from "react"
-import "./game.css"
+import { Link } from "react-router-dom"
+
 import '../../common/style/base.css'
-import '../../common/style/media.css'
+import './media.css'
+import "./game.css"
+
 const Game =()=> {
     return (
-<main className="main">
+
  <div className="container">
     <div className="row main-row">
      <div className="col-md-12 col-xs-12 main-box">
- 
-     
-   
-     <div className="row sort-row">
-     <div className="col-md-6 col-xs-5">
-     
+        <div className="row sort-row">
+             <div className="col-md-6 col-xs-5">
+
      </div>
-      <div className="col-md-6 col-xs-7 main-sort">
-      <div className="col-md-4 col-xs-4">
+            <div className="col-md-6 col-xs-7 main-sort">
+             <div className="col-md-4 col-xs-4">
        <p className="sort-name">Сортировать:</p>
        </div>
-        <div className="col-md-4 col-xs-4 btn-popular">
+              <div className="col-md-4 col-xs-4 btn-popular">
        <button className="popular">Популярные</button>
        </div>
-       <div className="col-md-4 col-xs-4">
+              <div className="col-md-4 col-xs-4">
        <button className="new">Новые</button>
        </div>
-        </div>
-     </div>
-   
-
-     <div className="wrap-block">
+              </div>
+         </div>
+         <div className="wrap-block">
        <div className="bl">
      <div className="block"></div>
      </div>
@@ -45,39 +43,38 @@ const Game =()=> {
        <div className="col-md-7 col-xs-7 main-choice-cont">
          <div className="main-dots pagination dots-pagin">
            <ul>
-             <a href="#">
+             <Link to="/">
                <li></li>
-             </a>
-             <a href="#">
+             </Link>
+             <Link to="/">
                <li></li>
-             </a>
-             <a href="#">
+             </Link>
+             <Link to="/">
                <li></li>
-             </a>
-             <a className="is-active" href="#">
+             </Link>
+             <Link className="is-active" to="/">
                <li></li>
-             </a>
-             <a href="#">
+             </Link>
+             <Link to="/">
                <li></li>
-             </a>
+             </Link>
            </ul>
          </div>
          <div className="pagination slide-arrow">
            <ul>
-             <a className="is-active" href="#">
+             <Link className="is-active" to="/">
                <li>
-                 <</li> </a> <a href="#">
-               <li>></li>
-             </a>
+                 prev</li> </Link> <Link to="/">
+               <li>next</li>
+             </Link>
            </ul>
          </div>
        </div>
    </div>
 
 <div className="row game-cards-row">
- 
      <div className="game-cards">
-        <a href="../new-pages/new-pages2.html" className="card">
+        <Link to="../new-pages/new-pages2.html" className="card-game">
            <img src="img/main-img1.png" alt="img"/>
       <div className="game-cont-box">
        
@@ -93,8 +90,8 @@ const Game =()=> {
         </div>
           
  </div>
-</a>
-            <a href="../new-pages/new-pages.html" className="card">
+</Link>
+            <Link to="../new-pages/new-pages.html" className="card-game">
                           <img src="img/main-img2.png" alt="img" />
       <div className="game-cont-box">
         <div className="game-rating">9.5</div>
@@ -108,9 +105,9 @@ const Game =()=> {
         <div className="comment-ico"><i className="far fa-comment-alt"></i></div>
           </div>
            </div>
-</a>
+</Link>
 
-           <a href="../new-pages/new-pages2.html" className="card">
+           <Link to="../new-pages/new-pages2.html" className="card-game">
                 <img src="img/main-img3.png" alt="img"/>
       <div className="game-cont-box">
         <div className="game-rating">9.9</div>
@@ -124,9 +121,9 @@ const Game =()=> {
         <div className="comment-ico"><i className="far fa-comment-alt"></i></div>
           </div>
             </div>
-</a>
+</Link>
  
-             <a href="../new-pages/new-pages.html" className="card">
+             <Link to="../new-pages/new-pages.html" className="card-game">
               <img src="img/main-img4.png" alt="img"/>
       <div className="game-cont-box">
         <div className="game-rating">7.9</div>
@@ -140,10 +137,8 @@ const Game =()=> {
         <div className="comment-ico"><i className="far fa-comment-alt"></i></div>
           </div>
             </div>
-            </a>
-         
+            </Link>
        </div>
- 
 </div>
 
 
@@ -152,8 +147,7 @@ const Game =()=> {
    </div>
    </div>
    </div>
-   
-</main>
+ </div>
 )
   }
 export default Game

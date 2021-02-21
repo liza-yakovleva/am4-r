@@ -138,11 +138,17 @@
 
 .card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background-color: rgb(255, 255, 255);
   position: relative;
   margin: 10px;
   text-decoration: none;
+
+padding: 25px;
+
+
+justify-content: space-between;
+
 }
 
 .article-data-img {
@@ -602,21 +608,10 @@ border-right: 20px solid #f3efdb; */
 }
 
 
-.card {
-  width: 440px;
-  padding: 25px;
-  border: 2px solid #f2f2ef;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  /* align-items: ; */
-
-}
 
 .article-img-name {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-left: 40%;
   padding-top: 15px;
 

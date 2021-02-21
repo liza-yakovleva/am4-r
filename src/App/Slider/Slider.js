@@ -69,7 +69,7 @@ const Slider = () => {
                   <div className="slider-inf-img slider-inf-img6">
                     <img
                       src={slider_inf_img6}
-                      classNameName="slider-img"
+                      className="slider-img"
                       alt="no-image"
                     />
                   </div>

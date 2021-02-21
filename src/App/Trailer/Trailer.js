@@ -1,11 +1,14 @@
 import React from "react"
-import "./trailer.css"
+import { Link } from "react-router-dom"
+
 import '../../common/style/base.css'
-import '../../common/style/media.css'
+import './media.css'
+import "./trailer.css"
+
+
 const Trailer =()=> {
-    return (
-<main className="main">
- <div className="container">
+  return (
+      <div className="container">
     <div className="row main-row">
      <div className="col-md-12 col-xs-12 main-box">
  
@@ -44,30 +47,30 @@ const Trailer =()=> {
       <div className="col-md-6 col-xs-6 main-choice-cont">
         <div className="main-dots pagination dots-pagin">
             <ul>
-              <a href="#">
+              <Link to="/">
                 <li></li>
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="/">
                 <li></li>
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="/">
                 <li></li>
-              </a>
-              <a className="is-active" href="#">
+              </Link>
+              <Link className="is-active" to="/">
                 <li></li>
-              </a>
-              <a href="#">
+              </Link>
+              <Link to="/">
                 <li></li>
-              </a>
+              </Link>
             </ul>
         </div>
         <div className="pagination slide-arrow">
               <ul>
-                <a className="is-active" href="#">
+                <Link className="is-active" to="/">
                   <li>
-                    <</li> </a> <a href="#">
-                  <li>></li>
-                </a>
+                    prev</li> </Link> <Link to="/">
+                  <li>next</li>
+                </Link>
               </ul>
             </div>
    </div>
@@ -76,7 +79,7 @@ const Trailer =()=> {
 <div className="row game-cards-row">
   
      <div className="game-cards">
-       <a href="../new-pages/new-pages.html" className="card">
+       <Link to="../new-pages/new-pages.html" className="card-trailer">
         
            <img src="img/trailer-img1.png" alt="img"/>
       <div className="game-cont-box">
@@ -87,8 +90,8 @@ const Trailer =()=> {
       
           
  </div>
- </a>
- <a href="../new-pages/new-pages2.html" className="card">
+ </Link>
+ <Link to="../new-pages/new-pages2.html" className="card-trailer">
          
                <img src="img/trailer-img2.png" alt="img"/>
       <div className="game-cont-box">
@@ -97,8 +100,8 @@ const Trailer =()=> {
       <div className="descrip-name">Жанр: Action</div>
      
            </div>
-</a>
-<a href="../new-pages/new-pages.html" className="card">
+</Link>
+<Link to="../new-pages/new-pages.html" className="card-trailer">
             
                 <img src="img/trailer-img3.png" alt="img"/>
       <div className="game-cont-box">
@@ -108,9 +111,9 @@ const Trailer =()=> {
       <div className="descrip-name">Жанр: Action</div>
       
             </div>
-</a>
+</Link>
  
-            <a href="../new-pages/new-pages2.html" className="card">
+            <Link to="../new-pages/new-pages2.html" className="card-trailer">
               <img src="img/trailer-img4.png" alt="img"/>
       <div className="game-cont-box">
         <div className="game-rating"><i className="fas fa-play"></i></div>
@@ -118,18 +121,18 @@ const Trailer =()=> {
       <div className="descrip-name">Жанр: Action, Pixel</div>
     
             </div>
-            </a>
-               <a href="../new-pages/new-pages.html" className="card">
+            </Link>
+               <Link to="../new-pages/new-pages.html" className="card-trailer">
               <img src="img/trailer-img5.png" alt="img"/>
       <div className="game-cont-box">
         <div className="game-rating"><i className="fas fa-play"></i></div>
       <div className="game-name">Видеодайджест от AM4 
-Выпуск #211</div>
+Выпуск /211</div>
       <div className="descrip-name">Жанр: Action, Pixel</div>
       
             </div>
-             </a>
-                <a href="../new-pages/new-pages2.html" className="card">
+             </Link>
+                <Link to="../new-pages/new-pages2.html" className="card-trailer">
               <img src="img/trailer-img6.png" alt="img"/>
       <div className="game-cont-box">
         <div className="game-rating"><i className="fas fa-play"></i></div>
@@ -137,7 +140,7 @@ const Trailer =()=> {
       <div className="descrip-name">Жанр: Action</div>
       
             </div>
-              </a>
+              </Link>
          
        </div>
   
@@ -148,9 +151,10 @@ const Trailer =()=> {
     </div>
    </div>
    </div>
-   </div>
+        </div>
+         </div>
    
-</main>
-   );
+
+    )
   }
 export default Trailer
