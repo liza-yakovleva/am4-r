@@ -1,7 +1,6 @@
 import React from "react"
-
+import CustomSelect from "./CustomSelect"
 import '../../common/style/base.css'
-import '../../common/style/media.css'
 import "./main.css"
 
 
@@ -13,8 +12,22 @@ import cont_img4 from '../img/cont-img4.png'
 import cont_img5 from '../img/cont-img5.png'
 import cont_img6 from '../img/cont-img6.png'
 import cont_img7 from '../img/cont-img7.png'
-
-
+const styles = {
+  select: {
+    width: '100%',
+    maxWidth: 150,
+  },
+}
+const options = [
+  { value: 'All', label: 'Все' },
+  { value: 'Popular', label: 'Популярные' },
+  { value: 'Trailer', label: 'Трейлеры' },
+  { value: 'Game', label: 'Игры' },
+  { value: 'Article', label: 'Статьи' },
+]
+function onChangeInput(value){
+  console.log(value);
+}
 const Main =()=> {
     return (
       <main className="main">
@@ -22,7 +35,7 @@ const Main =()=> {
           <div className="row main-row">
             <div className="col-md-12 col-xs-12 main-box">
               <div className="row sort-row">
-                <div className="col-md-6 col-xs-6">
+                <div className="col-md-6 col-xs-6 decor-none">
                   <div className="main-decor">
                     <img
                       src={main_decor}
@@ -53,10 +66,15 @@ const Main =()=> {
                   </div>
                 </div>
                 <div className="col-md-7 col-xs-7 main-choice-cont">
-                  <button className="main-choice">
+                  <CustomSelect
+                    style={styles.select}
+                    options={options}
+                    defaultValue={options[0]}
+                  onChange={onChangeInput}/>
+                  {/* <button className="main-choice">
                     <div className="main-choice-text">Все </div>
                     <span className="main-choice-span">▼</span>
-                  </button>
+                  </button> */}
                 </div>
               </div>
               <div className="row img-btn-box">

@@ -1,19 +1,46 @@
 import React from "react";
 import "./slider.css"
 import '../../common/style/base.css'
-import '../../common/style/media.css'
+import slider_inf_img_m1 from '../img/slider-img1.png'
+import slider_inf_img_m2 from '../img/slider-img2.png'
+import slider_inf_img_m3 from '../img/slider-img3.png'
+import slider_inf_img_m4 from '../img/slider-img4.png'
 import slider_inf_img1 from '../img/slider-inf-img1.png'
 import slider_inf_img2 from '../img/slider-inf-img2.png'
 import slider_inf_img3 from '../img/slider-inf-img3.png'
 import slider_inf_img4 from '../img/slider-inf-img4.png'
 import slider_inf_img5 from '../img/slider-inf-img5.png'
 import slider_inf_img6 from '../img/slider-inf-img6.png'
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/dist/styles.css';
 const Slider = () => {
   return (
     <section className="slider">
       <div className="container">
         <div className="row slider-row">
           <div className="col-md-12 col-xs-12">
+             <AwesomeSlider>
+    <div> <img
+                    src={slider_inf_img_m1}
+                    className="slider-img"
+                    alt="no-image"
+                  /></div>
+    <div><img
+                    src={slider_inf_img_m2}
+                    className="slider-img"
+                    alt="no-image"
+                  /></div>
+    <div><img
+                    src={slider_inf_img_m3}
+                    className="slider-img"
+                    alt="no-image"
+                  /></div>
+    <div><img
+                    src={slider_inf_img_m4}
+                    className="slider-img"
+                    alt="no-image"
+                  /></div>
+  </AwesomeSlider>
             <div className="slider-information-wrap">
               <div className="information-img-box">
                 <div className="slider-inf-img slider-inf-img1">

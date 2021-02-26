@@ -1,7 +1,6 @@
 import React from "react"
 import "./enter.css"
 import '../../../common/style/base.css'
-import '../../../common/style/media.css'
 
 const Enter = () => {
 	return (

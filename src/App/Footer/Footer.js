@@ -1,7 +1,6 @@
 import React from "react";
-import '../../common/style/media.css'
 import '../../common/style/base.css'
-import './footer.css'
+
 import footer_form_ico from '../img/footer-form-ico.png'
 import footer_img from '../img/footer-img.png'
 import footer_img_decor from '../img/footer-img-decor.png'

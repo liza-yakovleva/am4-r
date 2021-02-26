@@ -4,9 +4,8 @@ import Menu from './Menu/Menu';
 import Search from './Search/Search';
 import Enter from './Enter/Enter';
 import Bur from './Bur-menu/Bur-menu';
-import '../../common/style/media.css'
 import '../../common/style/base.css'
-import './header.css'
+
 import './Menu/menu.css'
 import './Search/search.css'
 import { Route } from "react-router-dom"
