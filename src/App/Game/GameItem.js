@@ -25,7 +25,7 @@ class GameItem extends Component {
 
         return (
           <>
-                      <img src={image} alt="img"/>
+      <img src={image} className="gam-game-img" alt="img"/>
       <div className="gam-game-cont-box">
        
         <div className="gam-game-rating">{reiting}</div>
