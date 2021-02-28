@@ -2,7 +2,7 @@ import React from "react"
 import CustomSelect from "./CustomSelect"
 import '../../common/style/base.css'
 import "./main.css"
-
+import LoadMore from "./LoadMore"
 
 import main_decor from '../img/main-decor.png'
 import cont_img1 from '../img/cont-img1.png'
@@ -71,10 +71,7 @@ const Main =()=> {
                     options={options}
                     defaultValue={options[0]}
                   onChange={onChangeInput}/>
-                  {/* <button className="main-choice">
-                    <div className="main-choice-text">Все </div>
-                    <span className="main-choice-span">▼</span>
-                  </button> */}
+                  
                 </div>
               </div>
               <div className="row img-btn-box">
@@ -165,9 +162,11 @@ const Main =()=> {
                   </div>
                 </div>
                 <div className="col-md-12 col-xs-12">
-                  <div className="wrap-more">
-                    <button className="more">Подгрузить еще</button>
-                  </div>
+                  
+                  
+                     <LoadMore/>
+                    
+                  
                 </div>
               </div>
             </div>
