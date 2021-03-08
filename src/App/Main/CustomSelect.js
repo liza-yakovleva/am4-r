@@ -3,7 +3,7 @@ import Select from 'react-select'
 import "./main.css"
 
 
-const CustomSelect = ({style,options, defaultValue, onChange}) => {
+const CustomSelect = ({style, options, defaultValue, onChange}) => {
   return (
     <div style={style}>
       <Select options={options}

@@ -31,6 +31,7 @@
 .trayler-container-tr {
   background-color: #eae7d6;
   padding-bottom: 60px;
+  padding-top: 30px;
 }
 @media(max-width:767px) {
   .trail-name-tr {
@@ -176,6 +177,37 @@
   display: grid;
   grid-template: 1fr/ 1fr 1fr;
 }
+
+/* ---slider control------ */
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 40px;
+  color: #ffffff;
+  background: rgba(255, 253, 253, 0);
+
+
+}
+
+
+ul.slick-dots {
+  position: absolute;
+  top: -50px;
+
+}
+
+.slick-dots li button:before {
+  font-size: 25px;
+}
+
+.slick-list {
+  width: auto !important;
+  position: static !important;
+  max-width: 100% !important;
+
+}
+
+/* -----------------media------------ */
 @media(max-width:1650px) {
 .trail-cards-tr {
   grid-template: 1fr/1fr ;

@@ -1,13 +1,91 @@
-import React from "react"
+import React,{useState} from 'react'
 import { Link } from "react-router-dom"
-
+import Slider from 'react-slick';
+import CustomSelect from "../Main/CustomSelect"
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import '../../common/style/base.css'
 import "./trailer.css"
-
 import trailer_base from "./trailer_base";
 import TrailerItem from "./TrailerItem";
 
-const Trailer =()=> {
+const styles = {
+  select: {
+    width: '100%',
+        maxWidth: 450,
+            fontSize: 25,        
+  },
+}
+const options = [
+     { value: 'all', label: 'Все' },
+  { value: 'trailer_action', label: 'Экшен' },
+  { value: 'trailer_horror', label: 'Ужасы' },
+ { value: 'trailer_fantasy', label: 'Фантастика' },
+  { value: 'popular', label: 'Популярные' },
+   { value: 'new', label: 'Новые' },
+]
+
+const Trailer = () => {
+  var settings = {
+		dots: true,
+		infinite: true,
+		speed: 1000,
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		rows: 2,
+
+		autoplay: true,
+		autoplaySpeed: 6000,
+		cssEase: 'linear',
+		initialSlide: 0,
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					rows: 2,
+					slidesToShow: 1,
+					dots: true,
+					variableWidth: true
+				}
+			},
+			{
+				breakpoint: 900,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+
+					dots: false,
+					rows: 1
+				}
+			},
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+
+					dots: false,
+					rows: 1
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					dots: false,
+					slidesToScroll: 1,
+					rows: 1
+				}
+			}
+		]
+    }
+    
+const [selectedCategory, setSelectedCategory] = useState("all")
+
+    const onChangeInput = (value) => {
+        setSelectedCategory(value.value)
+    }
+ 
   return (
       <div className="container">
     <div className="row main-row-tr">
@@ -18,19 +96,22 @@ const Trailer =()=> {
      <div className="row sort-row-tr">
      <div className="col-md-6 col-xs-5">
      
-     </div>
-      <div className="col-md-6 col-xs-7 main-sort-tr">
-      <div className="col-md-4 col-xs-4">
-       <p className="sort-name-tr">Сортировать:</p>
-       </div>
-        <div className="col-md-4 col-xs-4 btn-popular-tr">
-       <button className="popular-tr">Популярные</button>
-       </div>
-       <div className="col-md-4 col-xs-4">
-       <button className="new-tr">Новые</button>
-       </div>
-        </div>
-     </div>
+     <CustomSelect
+                    style={styles.select}
+                    options={options}
+                    defaultValue={options[0]}
+                  onChange={onChangeInput}/>
+</div>
+
+						<div className="col-md-6 col-xs-7 gam-main-sort">
+							<div className="col-md-6 col-xs-6 gam-btn-popular">
+								<button  onClick={() => setSelectedCategory("popular")  } className="gam-popular"> Популярные </button>
+							</div>
+							<div className="col-md-6 col-xs-6">
+                                <button onClick={() => setSelectedCategory("new")} className="gam-new"> Новые </button>
+							</div>
+						</div>
+					</div>
    
 
      <div className="wrap-block-tr">
@@ -43,48 +124,22 @@ const Trailer =()=> {
      <div className="main-name-tr">Трейлеры</div>
       </div>
       <div className="col-md-1 col-xs-1 news-tr">
-     <div className="name-noties-box-tr"><div className="name-noties-tr">Все новости</div></div>
+     <div className="name-noties-box-tr"><div className="name-noties-tr">{selectedCategory}</div></div>
     </div>
       <div className="col-md-6 col-xs-6 main-choice-cont-tr ">
-        <div className="main-dots-tr pagination-tr dots-pagin-tr">
-            <ul>
-              <Link to="/">
-                <li></li>
-              </Link>
-              <Link to="/">
-                <li></li>
-              </Link>
-              <Link to="/">
-                <li></li>
-              </Link>
-              <Link className="is-active-tr" to="/">
-                <li></li>
-              </Link>
-              <Link to="/">
-                <li></li>
-              </Link>
-            </ul>
-        </div>
-        <div className="pagination-tr  slide-arrow-tr">
-              <ul>
-                <Link className="is-active-tr" to="/">
-                  <li>
-                    &lt;</li> </Link> <Link to="/">
-                  <li>&gt;</li>
-                </Link>
-              </ul>
-            </div>
+        
+       
    </div>
    </div>
 
 <div className="row trail-cards-row-tr">
   
                 <div className="trail-cards-tr">
-                  
-
-
-                {
-                    trailer_base.map(({
+                  <Slider {...settings}>  
+                    {(selectedCategory !== "all" && selectedCategory !== "new" && selectedCategory !== "popular")
+                      ?
+                      trailer_base.filter(item => item.category === selectedCategory 
+                    ).map(({
                       id,
                       image,
                         name,
@@ -106,63 +161,62 @@ const Trailer =()=> {
                             />
                         </Link>
                     ))
-                }
+               :
+               (selectedCategory !== "all") ?
+                                                 trailer_base.filter(item => item.genre === selectedCategory 
+                                        ).map(({
+                      id,
+                      image,
+                        name,
+                      description,
+                         long_text,
+            genre,
+    category,
+                    }) =>  (
+                      
+                      <Link to="../new-pages/new-pages.html" className="card-trailer-tr" key={id}>
+                            <TrailerItem
+                                id={id}
+                               image={image}
+                                name={name}
+                          description={description}
+                           long_text={long_text}
+            genre={genre}
+    category={category}
+                            />
+                    </Link>
+                    )
+										)
+                  :
+               trailer_base.map(({
+                      id,
+                      image,
+                        name,
+                      description,
+                         long_text,
+            genre,
+    category,
+                    }) =>  (
+                      
+                      <Link to="../new-pages/new-pages.html" className="card-trailer-tr" key={id}>
+                            <TrailerItem
+                                id={id}
+                               image={image}
+                                name={name}
+                          description={description}
+                           long_text={long_text}
+            genre={genre}
+    category={category}
+                            />
+                    </Link>
+                    )
+										)
+               
+               
+               
+               }
 
-                  
-       
-                  
-
- {/* <Link to="../new-pages/new-pages2.html" className="card-trailer-tr">
-         
-               <img src={image} alt="no-img"/>
-      <div className="trail-cont-box-tr">
-        <div className="trail-rating-tr"><i className="fas fa-play"></i></div>
-      <div className="trail-name-tr">The Order: 1886 - Новый трейлер</div>
-      <div className="descrip-name-tr">Жанр: Action</div>
-     
-           </div>
-</Link>
-<Link to="../new-pages/new-pages.html" className="card-trailer-tr">
-            
-                <img src={trailer_img3} alt="no-img"/>
-      <div className="trail-cont-box-tr">
-        <div className="trail-rating-tr"><i className="fas fa-play"></i></div>
-      <div className="trail-name-tr">FRed Dead Redemption: 
-Золото Сэта </div>
-      <div className="descrip-name-tr">Жанр: Action</div>
-      
-            </div>
-</Link>
- 
-            <Link to="../new-pages/new-pages2.html" className="card-trailer-tr">
-              <img src={trailer_img4} alt="img"/>
-      <div className="trail-cont-box-tr">
-        <div className="trail-rating-tr"><i className="fas fa-play"></i></div>
-      <div className="trail-name-tr">FineSweeper. Демонстрация игрового процесса</div>
-      <div className="descrip-name-tr">Жанр: Action, Pixel</div>
-    
-            </div>
-            </Link>
-               <Link to="../new-pages/new-pages.html" className="card-trailer-tr">
-              <img src={trailer_img5} alt="img"/>
-      <div className="trail-cont-box-tr">
-        <div className="trail-rating-tr"><i className="fas fa-play"></i></div>
-      <div className="trail-name-tr">Видеодайджест от AM4 
-Выпуск /211</div>
-      <div className="descrip-name-tr">Жанр: Action, Pixel</div>
-      
-            </div>
-             </Link>
-                <Link to="../new-pages/new-pages2.html" className="card-trailer-tr">
-              <img src={trailer_img6} alt="img"/>
-      <div className="trail-cont-box-tr">
-        <div className="trail-rating-tr"><i className="fas fa-play"></i></div>
-      <div className="trail-name-tr">Топ 10 лучший сюжет в играх</div>
-      <div className="descrip-name-tr">Жанр: Action</div>
-      
-            </div>
-              </Link> */}
-         
+         </Slider> 
        </div>
   
 </div>

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
-
+import { Link } from "react-router-dom"
 import "./trailer.css"
-
+import ReactPlayer from 'react-player/youtube'
 class TrailerItem extends Component {
 
     render() {
@@ -19,10 +19,10 @@ class TrailerItem extends Component {
 
         return (
            <>
-           <img src={image} alt="img" />
+            <Link to={`/trailer/${id}`}> <img src={image} alt="img"></img></Link>
          <div className="trail-cont-box-tr">
         <div className="trail-rating-tr"><i className="fas fa-play"></i></div>
-      <div className="trail-name-tr">{name}</div>
+      <Link to={`/trailer/${id}`}><div className="trail-name-tr">{name}</div></Link>
       <div className="descrip-name-tr">{description}</div>  
        </div>
     </>

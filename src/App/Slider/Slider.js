@@ -12,14 +12,20 @@ import slider_inf_img4 from '../img/slider-inf-img4.png'
 import slider_inf_img5 from '../img/slider-inf-img5.png'
 import slider_inf_img6 from '../img/slider-inf-img6.png'
 import AwesomeSlider from 'react-awesome-slider';
+import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
+
+const AutoplaySlider = withAutoplay(AwesomeSlider);
 const Slider = () => {
   return (
     <section className="slider">
       <div className="container">
         <div className="row slider-row">
           <div className="col-md-12 col-xs-12">
-             <AwesomeSlider>
+             <AutoplaySlider
+    play={true}
+    cancelOnInteraction={false} 
+    interval={3000}>
     <div> <img
                     src={slider_inf_img_m1}
                     className="slider-img"
@@ -40,7 +46,7 @@ const Slider = () => {
                     className="slider-img"
                     alt="no-image"
                   /></div>
-  </AwesomeSlider>
+  </AutoplaySlider>
             <div className="slider-information-wrap">
               <div className="information-img-box">
                 <div className="slider-inf-img slider-inf-img1">

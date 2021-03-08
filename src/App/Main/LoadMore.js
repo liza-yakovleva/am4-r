@@ -6,13 +6,15 @@ import '../../common/style/base.css'
 import "./main.css"
 
 const LoadMore=()=> {
-  const [news, setBool] = useState(true)
+  const [news, setBool] = useState(false)
   
  const handleToggleClick=() =>{
    setBool((val) => (
      val?false:true
    ))
  }
+  
+  
   return (
       <>
        

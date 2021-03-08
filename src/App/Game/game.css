@@ -73,7 +73,7 @@
   position: absolute;
   left: -15px;
   top: -53px;
-  width: 35px;;
+  width: 35px;
   height:35px;
   background-color :rgb(255, 255, 255);
   -webkit-transform-origin:0 100%;
@@ -82,6 +82,12 @@
   -webkit-transform: rotate(65deg);
   -ms-transform: rotate(65deg);
   transform: rotate(65deg);
+  }
+  /* -----------select------------- */
+  .main-choice-cont {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
   }
 /* ----------card------------ */
 .gam-game-cards {
@@ -182,6 +188,7 @@ text-transform: uppercase;
   display: flex;
   flex-direction: row;
   padding-bottom: 30px;
+  padding-top:20px;
   border-top: 2px solid #ebebeb;
 }
 .gam-main-decor {
@@ -257,13 +264,14 @@ border-bottom: 1px dotted #f7d54a;
 left:85%;
   top: -50px;
  
-  z-index:10
+  z-index:10;
 }
 .slick-next {
    right:10% ;
    top: -50px;
-   z-index:10
+   z-index:10;
 }
+
  /* _______ */
  
  @media(min-width:992px) {
@@ -403,6 +411,9 @@ left:85%;
      height: 40px;
      margin-top: 20px;
    }
+   .gam-btn-popular {
+     align-items: start;
+   }
  }
  @media(max-width:767px) {
   .slick-slider{
@@ -468,6 +479,18 @@ right: 65px;
      width: 70px;
      margin-top: 5%;
    }
+   .gam-sort-row {
+     flex-direction: column;
+   }
+   .gam-btn-popular {
+    align-items: center;
+    justify-content: center;
+}
+.gam-btn-new {
+  display: flex;
+  align-items: center;
+   justify-content: center;
+}
   }
  @media(max-width:475px) {
   .slick-slider{

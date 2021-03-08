@@ -4,6 +4,9 @@ import '../../common/style/base.css'
 import "./main.css"
 import LoadMore from "./LoadMore"
 
+
+
+
 import main_decor from '../img/main-decor.png'
 import cont_img1 from '../img/cont-img1.png'
 import cont_img2 from '../img/cont-img2.png'
@@ -15,7 +18,8 @@ import cont_img7 from '../img/cont-img7.png'
 const styles = {
   select: {
     width: '100%',
-    maxWidth: 150,
+    maxWidth: 250,
+    marginLeft: '65%',
   },
 }
 const options = [
@@ -26,7 +30,7 @@ const options = [
   { value: 'Article', label: 'Статьи' },
 ]
 function onChangeInput(value){
-  console.log(value);
+ 
 }
 const Main =()=> {
     return (
@@ -66,6 +70,7 @@ const Main =()=> {
                   </div>
                 </div>
                 <div className="col-md-7 col-xs-7 main-choice-cont">
+                  
                   <CustomSelect
                     style={styles.select}
                     options={options}
@@ -164,7 +169,8 @@ const Main =()=> {
                 <div className="col-md-12 col-xs-12">
                   
                   
-                     <LoadMore/>
+                  <LoadMore />
+                 
                     
                   
                 </div>

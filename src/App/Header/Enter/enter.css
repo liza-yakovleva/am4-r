@@ -1,4 +1,4 @@
-.enter {
+/* .enter {
   background-color: white;
   height: 40px;
   text-transform: uppercase;
@@ -21,4 +21,117 @@ letter-spacing: 0.9px;
 .reg:hover {
   color: #32272b;
 background-color: #30b5d8;
+} */
+
+
+
+.log-in{
+  /* margin-top: 13px; */
+  font-family: 'Open Sans';
+  color: #000000;
+  font-size: 18px;
+  /* Приближение из-за подстановки шрифтов */
+  font-weight: 700;
+  line-height: 30px;
+  /* Приближение из-за подстановки шрифтов */
+  text-align: left;
+}
+
+
+.reg:hover {
+  background-color: #30b5d8;
+}
+
+.enter.active,
+.reg.active {
+  background-color: rgb(83, 191, 101);
+}
+
+
+
+.field-for-registration,
+.field-for-log-in {
+  position: absolute;
+  
+  top: 60px;
+  width: 354px;
+  height: 324px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgb(48, 181, 216);
+  padding-left: 25px;
+  background-color: rgb(255, 255, 255);
+  transition-duration: 3s;
+  transition-delay: 3s;
+  z-index: 100000;
+}
+.field-for-registration {
+  right: 184px;
+}
+
+.field-for-log-in {
+  right: 454px;
+}
+/* .form-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+h3 {
+  margin-top: 30px !important;
+  margin-bottom: 15px !important;
+}
+
+.field-for-registration h3,
+.field-for-log-in h3 {
+  font-size: 26px;
+  font-family: "Open Sans";
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  line-height: 1.154;
+  text-align: left;
+  text-transform: uppercase;
+}
+.field-for-registration input[type="text"],
+.field-for-log-in input[type="text"] {
+  width: 240px;
+  height: 52px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(229, 229, 229);
+  border-radius: 3px;
+  background-color: rgb(255, 255, 255);
+  padding-left: 51px;
+  margin-bottom: 15px;
+}
+
+.field-for-registration input[type="text"]::-webkit-input-placeholder,
+.field-for-log-in input[type="text"]::-webkit-input-placeholder {
+  font-size: 18px;
+  font-family: "Open Sans Light";
+  color: rgb(92, 91, 91);
+  font-style: italic;
+  line-height: 1.667;
+  text-align: left;
+  margin-left: 51px;
+  text-overflow: ellipsis;
+}
+
+.field-for-registration input[type="text"]:focus::-webkit-input-placeholder,
+.field-for-log-in input[type="text"]:focus::-webkit-input-placeholder {
+  text-indent: -100px;
+  transition:
+    text-indent 0.8s ease;
+}
+
+.login {
+  background-image: url(../../img/user-icon.png);
+  background-repeat: no-repeat;
+  background-position: 15px;
+}
+
+.password {
+  background-image: url(../../img/lock-icon.png);
+  background-repeat: no-repeat;
+  background-position: 15px;
 }

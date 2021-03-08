@@ -10,6 +10,9 @@
 .awssld__bullets{
   position: absolute;
   z-index: 10000;
+  background-color: #ffffff00 !important;
+  border: none !important;
+  box-shadow: none !important;
   }
 .slider-row {
   display: flex;

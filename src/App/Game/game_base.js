@@ -198,7 +198,7 @@ const game_base = [
   },
        {
         id: 15,
-       image: "img-base/m-12.png",
+       image: "img-base/m-12.jpg",
         name: "Dragon Quest XI: Echoes of an Elusive Age",
     description: "PC, XSEX,",
     s_description: "PS4, Xbox One",
@@ -253,5 +253,20 @@ const game_base = [
     category: "game_action",
     },
 ];
+
+
+export const getArticleObject = array => {
+    return array.reduce((obj,item) =>({
+        ...obj,
+        [item.id]:item
+    }),{})
+}
+export const getGameObject = array => {
+    return array.reduce((obj,item) =>({
+        ...obj,
+        [item.id]:item
+    }),{})
+}
+
 
 export default game_base;

@@ -10,15 +10,15 @@ opacity: 0.9;
 
 }
 .form-search {
- height: 70px;
- background-color: #eeeeee;
- border: none;
+ height: 70px !important;
+ background-color: #eeeeee !important;
+ border: none !important;
  
 }
 .form-search::placeholder {
- color: #32272b;
- font-weight: 300;
- font-size: 18px;
-font-weight: 300;
-letter-spacing: 1px;
+ color: #32272b !important;
+ font-weight: 300 !important;
+ font-size: 18px !important;
+font-weight: 300 !important;
+letter-spacing: 1px !important;
 }
